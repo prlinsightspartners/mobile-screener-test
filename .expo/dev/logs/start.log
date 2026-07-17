@@ -597,3 +597,10 @@
 {"_e":"metro:client_log","_t":1784304448652,"level":"warn","data":["[Layout children]: No route named \"screener\" exists in nested children:","[\"index\", \"settings\"]"]}
 {"_e":"metro:bundling:started","_t":1784304487574,"id":"3r","platform":"web","environment":null,"entry":"app\\(tabs)\\index.tsx"}
 {"_e":"metro:bundling:started","_t":1784304487585,"id":"3s","platform":"web","environment":null,"entry":"app\\(tabs)\\index.tsx"}
+{"_e":"root:init","_t":1784304530049,"format":"v0-jsonl","version":"57.0.9"}
+{"_e":"env:mode","_t":1784304530051,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1784304530058,"mode":"development","files":[],"env":{}}
+{"_e":"devserver:start","_t":1784304531514,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../..\\..\\app","serverComponents":false,"serverActions":false,"serverRendering":false,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1784304532536,"serverRoot":"../..\\..","projectRoot":"../..\\..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":false,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"expo:dev-tools-plugin:load","_t":1784304533295,"plugins":[]}
+{"_e":"metro:instantiate","_t":1784304547930,"atlas":false,"workers":6,"host":"::","port":8081}
