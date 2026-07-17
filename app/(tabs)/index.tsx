@@ -4,15 +4,15 @@ import { Colors, Spacing, Radius } from "../../constants/theme";
 import SectionHeader from "../../components/SectionHeader";
 import StockRow from "../../components/StockRow";
 import {
-  placeholderWatchlist,
-  placeholderPortfolioSummary,
+  portfolioSummary,
   placeholderMarketIndices,
   placeholderNews,
   placeholderUser,
+  placeholderWatchlist,
 } from "../../data/placeholderData";
 
 export default function DashboardScreen() {
-  const p = placeholderPortfolioSummary;
+  const p = portfolioSummary;
   const isPositiveDay = p.todayChangePercent >= 0;
   const isPositiveTotal = p.totalGainPercent >= 0;
 
@@ -86,7 +86,7 @@ export default function DashboardScreen() {
         {/* Watchlist */}
         <SectionHeader title="Your Watchlist" action="See all" />
         {placeholderWatchlist.map((stock) => (
-          <StockRow key={stock.id} stock={stock} />
+          <StockRow key={stock.id} {...stock} />
         ))}
 
         {/* News */}

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { View, Text, StyleSheet, ScrollView, SafeAreaView } from "react-native";
-import { Colors, Spacing, Radius } from "../../constants/theme";
-import SectionHeader from "../../components/SectionHeader";
-import SettingsRow from "../../components/SettingsRow";
-import { placeholderUser } from "../../data/placeholderData";
+import { Colors, Spacing, Radius } from "../constants/theme";
+import SectionHeader from "./SectionHeader";
+import SettingsRow from "./SettingsRow";
+import { placeholderUser } from "../data/placeholderData";
 
 export default function SettingsScreen() {
   const [notifications, setNotifications] = useState(true);
@@ -26,7 +26,7 @@ export default function SettingsScreen() {
             <Text style={styles.avatarText}>
               {placeholderUser.name
                 .split(" ")
-                .map((n) => n[0])
+                .map((n: string) => n[0])
                 .join("")}
             </Text>
           </View>

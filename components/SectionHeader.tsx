@@ -1,55 +1,50 @@
-import { Tabs } from "expo-router";
-import { Ionicons } from "@expo/vector-icons";
-import { Colors } from "../../constants/theme";
+import React from "react";
+import { View, Text, Pressable, StyleSheet } from "react-native";
+import { Colors, Spacing } from "../constants/theme";
 
-export default function TabsLayout() {
+interface SectionHeaderProps {
+  title: string;
+  action?: string;
+  onActionPress?: () => void;
+}
+
+export default function SectionHeader({ title, action, onActionPress }: SectionHeaderProps) {
   return (
-    <Tabs
-      screenOptions={{
-        headerShown: false,
-        tabBarActiveTintColor: Colors.accent,
-        tabBarInactiveTintColor: Colors.textMuted,
-        tabBarStyle: {
-          backgroundColor: Colors.surface,
-          borderTopColor: Colors.border,
-          borderTopWidth: 1,
-          height: 88,
-          paddingTop: 8,
-          paddingBottom: 28,
-        },
-        tabBarLabelStyle: {
-          fontSize: 11,
-          fontWeight: "600",
-        },
-      }}
-    >
-      <Tabs.Screen
-        name="index"
-        options={{
-          title: "Dashboard",
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="grid-outline" size={size} color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="screener"
-        options={{
-          title: "Screener",
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="filter-outline" size={size} color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="settings"
-        options={{
-          title: "Settings",
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="settings-outline" size={size} color={color} />
-          ),
-        }}
-      />
-    </Tabs>
+    <View style={styles.container}>
+      <Text style={styles.title}>{title}</Text>
+      {action ? (
+        <Pressable onPress={onActionPress} style={({ pressed }) => [styles.actionButton, pressed && styles.actionButtonPressed]}>
+          <Text style={styles.actionText}>{action}</Text>
+        </Pressable>
+      ) : null}
+    </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginTop: Spacing.lg,
+    marginBottom: Spacing.sm,
+    paddingHorizontal: Spacing.md,
+  },
+  title: {
+    color: Colors.textPrimary,
+    fontSize: 16,
+    fontWeight: "700",
+  },
+  actionButton: {
+    paddingHorizontal: Spacing.sm,
+    paddingVertical: 4,
+  },
+  actionButtonPressed: {
+    opacity: 0.7,
+  },
+  actionText: {
+    color: Colors.accent,
+    fontSize: 13,
+    fontWeight: "700",
+  },
+});
