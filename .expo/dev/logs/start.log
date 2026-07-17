@@ -632,3 +632,25 @@
 {"_e":"metro:client_log","_t":1784304707207,"level":"warn","data":["Route \"./(tabs)/screener.tsx\" is missing the required default export. Ensure a React component is exported as default."]}
 {"_e":"metro:client_log","_t":1784304707304,"level":"warn","data":["[Layout children]: No route named \"screener\" exists in nested children:","[\"index\", \"settings\"]"]}
 {"_e":"metro:client_log","_t":1784304707311,"level":"warn","data":["props.pointerEvents is deprecated. Use style.pointerEvents"]}
+{"_e":"metro:bundling:started","_t":1784304799693,"id":"b","platform":"web","environment":null,"entry":"app\\(tabs)\\_layout.tsx"}
+{"_e":"metro:client_log","_t":1784304799718,"level":"warn","data":["[Layout children]: No route named \"screener\" exists in nested children:","[\"index\", \"settings\"]"]}
+{"_e":"metro:bundling:started","_t":1784304799894,"id":"c","platform":"web","environment":null,"entry":"app\\(tabs)\\_layout.tsx"}
+{"_e":"metro:bundling:started","_t":1784304816759,"id":"g","platform":"web","environment":null,"entry":"node_modules\\expo-router\\entry.js"}
+{"_e":"metro:bundling:progress","_t":1784304816759,"id":"g","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:done","_t":1784304816921,"id":"g","total":1,"ms":162.0576}
+{"_e":"metro:client_log","_t":1784304817684,"level":"info","data":["%cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools","font-weight:bold"]}
+{"_e":"metro:client_log","_t":1784304817684,"level":"log","data":["Running application \"main\" with appParams:\n","{\"hydrate\": undefined, \"rootTag\": \"#root\"}","\nDevelopment-level warnings: ON.\nPerformance optimizations: OFF."]}
+{"_e":"metro:client_log","_t":1784304817688,"level":"log","data":["[web] Logs will appear in the browser console"]}
+{"_e":"metro:client_log","_t":1784304817808,"level":"warn","data":["Route \"./(tabs)/screener.tsx\" is missing the required default export. Ensure a React component is exported as default."]}
+{"_e":"metro:client_log","_t":1784304817923,"level":"warn","data":["[Layout children]: No route named \"screener\" exists in nested children:","[\"index\", \"settings\"]"]}
+{"_e":"metro:client_log","_t":1784304817930,"level":"warn","data":["props.pointerEvents is deprecated. Use style.pointerEvents"]}
+{"_e":"metro:bundling:started","_t":1784304933441,"id":"l","platform":"web","environment":null,"entry":"node_modules\\expo-router\\entry.js"}
+{"_e":"metro:bundling:progress","_t":1784304933441,"id":"l","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:done","_t":1784304933569,"id":"l","total":1,"ms":127.4955}
+{"_e":"metro:client_log","_t":1784304934151,"level":"info","data":["%cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools","font-weight:bold"]}
+{"_e":"metro:client_log","_t":1784304934151,"level":"log","data":["Running application \"main\" with appParams:\n","{\"hydrate\": undefined, \"rootTag\": \"#root\"}","\nDevelopment-level warnings: ON.\nPerformance optimizations: OFF."]}
+{"_e":"metro:client_log","_t":1784304934153,"level":"log","data":["[web] Logs will appear in the browser console"]}
+{"_e":"metro:client_log","_t":1784304934207,"level":"warn","data":["Route \"./(tabs)/screener.tsx\" is missing the required default export. Ensure a React component is exported as default."]}
+{"_e":"metro:client_log","_t":1784304934311,"level":"warn","data":["[Layout children]: No route named \"screener\" exists in nested children:","[\"index\", \"settings\"]"]}
+{"_e":"metro:client_log","_t":1784304934319,"level":"warn","data":["props.pointerEvents is deprecated. Use style.pointerEvents"]}
+{"_e":"metro:client_log","_t":1784304941410,"level":"warn","data":["Cannot record touch end without a touch start.\n","Touch End: {\"identifier\":0,\"pageX\":1051,\"pageY\":69,\"timestamp\":8041.300000000279}\n","Touch Bank: []"]}
