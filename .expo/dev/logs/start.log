@@ -604,3 +604,31 @@
 {"_e":"metro:config","_t":1784304532536,"serverRoot":"../..\\..","projectRoot":"../..\\..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":false,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
 {"_e":"expo:dev-tools-plugin:load","_t":1784304533295,"plugins":[]}
 {"_e":"metro:instantiate","_t":1784304547930,"atlas":false,"workers":6,"host":"::","port":8081}
+{"_e":"metro:bundling:started","_t":1784304704447,"id":"6","platform":"web","environment":null,"entry":"node_modules\\expo-router\\entry.js"}
+{"_e":"metro:bundling:progress","_t":1784304704448,"id":"6","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1784304704479,"id":"6","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1784304704579,"id":"6","progress":0.09765625,"total":16,"current":5}
+{"_e":"metro:bundling:progress","_t":1784304704766,"id":"6","progress":0.20013850415512466,"total":38,"current":17}
+{"_e":"metro:bundling:progress","_t":1784304704867,"id":"6","progress":0.20013850415512466,"total":134,"current":33}
+{"_e":"metro:bundling:progress","_t":1784304704967,"id":"6","progress":0.20013850415512466,"total":159,"current":63}
+{"_e":"metro:bundling:progress","_t":1784304705073,"id":"6","progress":0.20013850415512466,"total":188,"current":82}
+{"_e":"metro:bundling:progress","_t":1784304705172,"id":"6","progress":0.21513807152557718,"total":235,"current":109}
+{"_e":"metro:bundling:progress","_t":1784304705275,"id":"6","progress":0.2264447086801427,"total":290,"current":138}
+{"_e":"metro:bundling:progress","_t":1784304705375,"id":"6","progress":0.27836952839775675,"total":326,"current":172}
+{"_e":"metro:bundling:progress","_t":1784304705477,"id":"6","progress":0.33169678409865266,"total":349,"current":201}
+{"_e":"metro:bundling:progress","_t":1784304705577,"id":"6","progress":0.40378785451049504,"total":395,"current":251}
+{"_e":"metro:bundling:progress","_t":1784304705677,"id":"6","progress":0.40378785451049504,"total":457,"current":287}
+{"_e":"metro:bundling:progress","_t":1784304705777,"id":"6","progress":0.4222368830828238,"total":494,"current":321}
+{"_e":"metro:bundling:progress","_t":1784304705877,"id":"6","progress":0.475708591117147,"total":564,"current":389}
+{"_e":"metro:bundling:progress","_t":1784304705977,"id":"6","progress":0.555446778212887,"total":636,"current":474}
+{"_e":"metro:bundling:progress","_t":1784304706077,"id":"6","progress":0.8036220720563007,"total":676,"current":606}
+{"_e":"metro:bundling:progress","_t":1784304706186,"id":"6","progress":0.8709343524018595,"total":704,"current":657}
+{"_e":"metro:bundling:progress","_t":1784304706286,"id":"6","progress":0.8736624144822374,"total":781,"current":730}
+{"_e":"metro:bundling:progress","_t":1784304706386,"id":"6","progress":0.968657771924722,"total":823,"current":810}
+{"_e":"metro:bundling:done","_t":1784304706553,"id":"6","total":823,"ms":2105.6436}
+{"_e":"metro:client_log","_t":1784304707119,"level":"info","data":["%cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools","font-weight:bold"]}
+{"_e":"metro:client_log","_t":1784304707121,"level":"log","data":["Running application \"main\" with appParams:\n","{\"hydrate\": undefined, \"rootTag\": \"#root\"}","\nDevelopment-level warnings: ON.\nPerformance optimizations: OFF."]}
+{"_e":"metro:client_log","_t":1784304707128,"level":"log","data":["[web] Logs will appear in the browser console"]}
+{"_e":"metro:client_log","_t":1784304707207,"level":"warn","data":["Route \"./(tabs)/screener.tsx\" is missing the required default export. Ensure a React component is exported as default."]}
+{"_e":"metro:client_log","_t":1784304707304,"level":"warn","data":["[Layout children]: No route named \"screener\" exists in nested children:","[\"index\", \"settings\"]"]}
+{"_e":"metro:client_log","_t":1784304707311,"level":"warn","data":["props.pointerEvents is deprecated. Use style.pointerEvents"]}
