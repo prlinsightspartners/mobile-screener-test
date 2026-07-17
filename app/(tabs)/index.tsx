@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { View, Text, StyleSheet, ScrollView, SafeAreaView } from "react-native";
 import { Colors, Spacing, Radius } from "../../constants/theme";
 import SectionHeader from "../../components/SectionHeader";
@@ -11,7 +11,49 @@ import {
   placeholderWatchlist,
 } from "../../data/placeholderData";
 
+interface MarketIndex {
+  id: string;
+  name: string;
+  value: string;
+  changePercent: number;
+  changeAbs: number;
+  price: number;
+  previousClose: number;
+}
+
+const INDICES_API_URL = "http://localhost:8000/indices";
+
 export default function DashboardScreen() {
+  const [marketIndices, setMarketIndices] = useState<MarketIndex[]>([]);
+  const [indicesLoading, setIndicesLoading] = useState(true);
+  const [indicesError, setIndicesError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchIndices = async () => {
+      try {
+        setIndicesLoading(true);
+        setIndicesError(null);
+        const response = await fetch(INDICES_API_URL);
+
+        if (!response.ok) {
+          throw new Error(`Server returned status ${response.status}`);
+        }
+
+        const data: MarketIndex[] = await response.json();
+        setMarketIndices(data);
+      } catch (error) {
+        setIndicesError("Unable to load live index values. Using fallback data.");
+        setMarketIndices([]);
+      } finally {
+        setIndicesLoading(false);
+      }
+    };
+
+    fetchIndices();
+  }, []);
+
+  const indicesToRender = marketIndices.length > 0 ? marketIndices : placeholderMarketIndices;
+
   const p = portfolioSummary;
   const isPositiveDay = p.todayChangePercent >= 0;
   const isPositiveTotal = p.totalGainPercent >= 0;
@@ -62,8 +104,12 @@ export default function DashboardScreen() {
 
         {/* Market indices */}
         <SectionHeader title="Market Overview" />
+        {indicesError ? <Text style={styles.errorText}>{indicesError}</Text> : null}
+        {indicesLoading ? (
+          <Text style={styles.loadingText}>Fetching live index values...</Text>
+        ) : null}
         <View style={styles.indicesRow}>
-          {placeholderMarketIndices.map((idx) => {
+          {indicesToRender.map((idx) => {
             const positive = idx.changePercent >= 0;
             return (
               <View key={idx.id} style={styles.indexCard}>
@@ -200,6 +246,18 @@ const styles = StyleSheet.create({
   indexChange: {
     fontSize: 12,
     fontWeight: "600",
+  },
+  loadingText: {
+    color: Colors.accent,
+    fontSize: 12,
+    marginBottom: Spacing.sm,
+    paddingLeft: Spacing.md,
+  },
+  errorText: {
+    color: Colors.negative,
+    fontSize: 12,
+    marginBottom: Spacing.sm,
+    paddingLeft: Spacing.md,
   },
   newsCard: {
     backgroundColor: Colors.surface,
